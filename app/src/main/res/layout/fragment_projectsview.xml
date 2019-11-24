@@ -10,7 +10,7 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/header"
-        android:elevation="3dp"
+        android:elevation="2dp"
         android:background="#FFFFFF"
         android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
@@ -34,13 +34,34 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <!-- TODO: Update blank fragment layout -->
-    <androidx.recyclerview.widget.RecyclerView
+    <RelativeLayout
         android:layout_below="@id/header"
-        android:id="@+id/recyclerView"
+        android:layout_above="@id/footer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
 
     </RelativeLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/footer"
+            android:elevation="10dp"
+            android:background="#FFFFFF"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
 
 </FrameLayout>
