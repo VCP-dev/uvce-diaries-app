@@ -17,6 +17,8 @@ import android.view.ViewGroup;
 import com.example.diariesprac.Project;
 import com.example.diariesprac.ProjectAdapter;
 import com.example.diariesprac.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +43,8 @@ public class Projectsview extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_projectsview,container,false);
 
+        FloatingActionButton fab = v.findViewById(R.id.floatingbut);
+
         recyclerView = v.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
@@ -56,6 +60,14 @@ public class Projectsview extends Fragment {
 
         adapter = new ProjectAdapter(projectitems,this.getContext());
         recyclerView.setAdapter(adapter);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v,"Open google form",Snackbar.LENGTH_SHORT)
+                        .setAction("Action",null).show();
+            }
+        });
 
 
         return v;

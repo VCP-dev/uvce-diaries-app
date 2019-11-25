@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.main.Projectsview">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,10 +18,16 @@
         android:layout_height="wrap_content">
 
 
+
+
+
+
         <ImageView
             android:src="@drawable/uvce"
             android:layout_width="42dp"
             android:layout_height="42dp"/>
+
+
 
         <TextView
             android:text="Diaries"
@@ -32,11 +39,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+
+
     </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
         android:layout_below="@id/header"
-        android:layout_above="@id/footer"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -46,22 +55,32 @@
             android:layout_height="match_parent" />
 
 
+
+
     </RelativeLayout>
 
     <!-- TODO: Update blank fragment layout -->
 
 
-    <androidx.appcompat.widget.Toolbar
-            android:id="@+id/footer"
-            android:elevation="10dp"
-            android:background="#FFFFFF"
-            android:minHeight="?attr/actionBarSize"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingbut"
+            android:src="@drawable/circ"
+            android:background="#00000000"
+            android:elevation="28dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+
+
+
+            />
 
     </RelativeLayout>
+
 
 
 </FrameLayout>
