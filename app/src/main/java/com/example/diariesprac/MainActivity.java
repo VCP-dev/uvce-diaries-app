@@ -8,15 +8,21 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.diariesprac.ui.main.MainFragment;
 import com.example.diariesprac.ui.main.Projectpage;
 import com.example.diariesprac.ui.main.Projectsview;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
 
     ViewPager viewPager;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         MainPagerAdapter mainPagerAdapter = new MainPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(mainPagerAdapter);
+
 
     }
 
@@ -44,8 +51,6 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     return new MainFragment();
                 case 1:
-                    return new Projectpage();
-                case 2:
                     return new Projectsview();
                 default:
                     return null;
@@ -65,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 3;
+            return 2;
         }
     }
 

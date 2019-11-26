@@ -15,6 +15,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.example.diariesprac.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainFragment extends Fragment {
 
@@ -40,6 +42,17 @@ public class MainFragment extends Fragment {
         webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);         //// Use cache resources when avaliable.....otherwise use network
         webSettings.setAppCacheEnabled(true);
         webSettings.setDomStorageEnabled(true);
+
+        FloatingActionButton fab = v.findViewById(R.id.floatingbut);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v,"Open google form",Snackbar.LENGTH_SHORT)
+                        .setAction("Action",null).show();
+            }
+        });
+
 
         return v;
 
